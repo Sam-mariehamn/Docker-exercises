@@ -1,0 +1,12 @@
+Dockerfile:
+
+FROM ubuntu:18.04
+COPY script.sh . 
+RUN chmod +x script.sh
+RUN apt-get update && apt-get install curl -y
+CMD ./script.sh
+
+Command:
+
+docker run -it curler
+
